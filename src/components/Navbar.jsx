@@ -37,7 +37,7 @@ const Navbar = () => {
           className="w-full h-[100px] md:rounded-[50px] rounded-none bg-white md:border-[1px] border-b-[1px] border-black
          flex justify-between items-center lg:px-[30px] sm:px-[40px] px-[15px] z-[100]"
         >
-          <div className="lg:hidden block">
+          <div className="lg:hidden block" onClick={() => setShowSidebar(true)}>
             <RiMenu2Fill color="black" size={32} />
           </div>
 
