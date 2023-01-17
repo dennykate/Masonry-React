@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import {
+  Navbar,
+  About,
+  Authors,
+  Background,
+  Main,
+  Subscribe,
+} from "./components";
+import ScrollToTop from "./components/ScrollToTop";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-primary relative select-black">
+      <div className=" absolute top-0 left-0 z-[100] w-full ">
+        <Navbar />
+        <Main />
+        <Authors />
+        <About />
+        <Subscribe />
+        <ScrollToTop />
+      </div>
+
+      <Background />
     </div>
   );
-}
+};
 
 export default App;
